@@ -1,0 +1,21 @@
+{
+    "name": "Scrapper",
+    "description": "Este es un scrapper de linkedIn by Marcoh",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": ["activeTab","scripting"],
+    "content_scripts": [
+      {
+      "matches":["https://www.linkedin.com/*"],
+      "js":["scripts.js"]
+      }
+    ],
+    "background":{
+      "service_worker":"background.js"
+    }
+
+  }
+  
